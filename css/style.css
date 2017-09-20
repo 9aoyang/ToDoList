@@ -1,19 +1,48 @@
-* {
+/* * {
     background: rgba(0, 0, 0, .1);
-}
+} */
 
-body,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
+body {
+    background: #00334b;
+    color: #fff;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type='text'],
+input[type='date'] {
+    display: block;
+    width: 100%;
+}
+
+input,
+.task-item {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.task-list {
+    margin: 5px 0;
+}
+
+.task-item {
+    background: #fff;
+    color: #333;
+    margin-bottom: 2px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    -webkit-transition: background 666ms;
+    transition: background 666ms;
+}
+
+.task-item:hover {
+    background: #ddd;
 }
