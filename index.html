@@ -22,10 +22,10 @@
         <![endif]-->
     <!-- Container start -->
     <div class="container">
-        <h1>羔羊的Todolist</h1>
+        <h1>羔羊的Todo</h1>
         <!-- Add task start -->
         <form class="add-task">
-            <input name="content" type="text" placeholder="e.g. Please write a task">
+            <input name="content" type="text" placeholder="e.g. Please write a task" autofocus autocomplete="off">
             <button type="submit">submit</button>
         </form>
         <!-- Add end -->
@@ -35,8 +35,8 @@
             <div class="task-item">
                 <span><input type="checkbox"></span>
                 <span class="task-content">item content 1</span>
-                <span>delete</span>
-                <span>details</span>
+                <span class="action"> 删除</span>
+                <span class="action"> 详细</span>
             </div>
         </div>
         <!-- Task end -->
@@ -53,9 +53,9 @@
             <div class="remind">
                 <input type="date"> -->
         <!-- <button type="sumbit">sumbit</button> -->
-    <!-- </div>
+        <!-- </div>
     </div> -->
-    <!--Detail end -->
+        <!--Detail end -->
     </div>
     <!-- Container end -->
     <script src="./node_modules/store/dist/store.everything.min.js"></script>

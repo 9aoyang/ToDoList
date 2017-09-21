@@ -4,21 +4,23 @@
 (function() {
     'use strict';
 
-    var $form_add_task = $('.add-task');
+    var form_add_task = $('.add-task');
     var task_list = [];
-
+    // store.clear();
     init();
-    $form_add_task.on('submit', function(e) {
+    form_add_task.on('submit', function(e) {
         var new_task = {};
         e.preventDefault();
         // 获取新task的值
-        new_task.content = $(this).find('input[name=content]').val();
+        var input = $(this).find('input[name=content]');
+        new_task.content = input.val();
         // 如果task值为空，直接返回，否则继续执行
         if (!new_task.content) return;
         // 存入新task
-        if(!add_task(new_task)) {
+        if (add_task(new_task)) {
             //console.log('new_task', new_task);
             render_task_list();
+            input.val('');
         }
 
     });
@@ -27,33 +29,33 @@
         // 更新localStroage
         task_list.push(new_task);
         store.set('task_list', task_list);
-        //store.clear();
+        console.log('task_list', task_list);
         return true;
     }
 
     function init() {
         task_list = store.get('task_list') || [];
-        if(task_list.length) {
+        if (task_list.length) {
             render_task_list();
         }
     }
 
     function render_task_list() {
-        var $task_list = $('.task-list');
-        $task_list.html('');
+        var tasklist = $('.task-list');
+        tasklist.html('');
         for (var i = 0; i < task_list.length; i++) {
-            var $task = render_task_tpl(task_list[i]);
-            $task_list.append($task);
+            var task = render_task_tpl(task_list[i]);
+            tasklist.append(task);
         }
     }
 
     function render_task_tpl(data) {
         var list_item_tpl = '<div class="task-item">' +
-        '<span><input type="checkbox"></span>' +
-        '<span class="task-content">' + data.content + '</span>' +
-        '<span>删除</span>' +
-        '<span>详细</span>'
-        '</div>'
+            '<span><input type="checkbox"></span>' +
+            '<span class="task-content">' + data.content + '</span>' +
+            '<span class="action"> 删除</span>' +
+            '<span class="action"> 详细</span>' +
+            '</div>';
         return $(list_item_tpl);
     }
 })();
