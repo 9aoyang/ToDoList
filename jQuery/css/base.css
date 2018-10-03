@@ -1,12 +1,138 @@
 * {
-  background: rgba(0, 0, 0, .1)
+  transition: background .2s;
 }
 
 body {
-  /* background: #000; */
+  background: #00334b;
+  color: #fff;
+  padding: 1px;
+}
+
+textarea,
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  background: #eee;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3)
+}
+
+textarea:hover,
+textarea:focus,
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="text"]:focus,
+input[type="date"]:focus {
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2)
+}
+
+button {
+  background: #46b1e4;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+  color: #333;
+}
+
+button:hover {
+  background: #5fb9e4;
+}
+
+input[type=text],
+input[type=date],
+textarea,
+button {
+  border: 0;
+}
+
+input,
+.task-item,
+.task-detail-mask,
+textarea,
+button {
+  border-radius: 3px;
+  padding: 10px;
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.add-task,
+.remind {
+  display: flex;
+}
+
+/* 任务添加 */
+h1 {
+  text-align: center;
+}
+
+/* 任务添加 End */
+
+/* 任务列表 */
+.task-list {
+  margin: 10px 0;
+}
+
+.task-item {
+  background: #fff;
+  color: #333;
+  margin-bottom: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+  cursor: pointer;
+}
+
+.task-item:hover {
+  background: #ddd;
+}
+/* 任务列表 End */
+
+/* 任务详情 */
+.task-detail,
+.task-detail-mask {
+  position: absolute;
+}
+
+.task-detail {
+  width: 50%;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  color: #333333;
+  background: #fff;
+}
+
+.task-detail > * {
+  margin-bottom: 10px;
+}
+
+.task-detail .content {
+  padding: 10px;
+  font-weight: 900;
+}
+
+.desc {
+  display: flex;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.task-detail-mask {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(66 , 66 , 66 , .6);
+  z-index: 1;
+}
+/* 任务详情 End */
+
+
+
+
+
+
+

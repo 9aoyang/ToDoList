@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Todo</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="css/base.css">
 </head>
 
@@ -13,9 +14,10 @@
   <!-- 外层容器 -->
   <div class="container">
     <!-- 任务添加 -->
+    <h1>羔羊的Todo</h1>
     <div class="add-task">
-      <input type="text" name="" id="">
-      <button>submit</button>
+      <input type="text" name="" id="" placeholder="">
+      <button type="submit">submit</button>
     </div>
     <!-- 任务添加 End -->
     <!-- 任务列表 -->
@@ -56,17 +58,19 @@
     <!-- 清单列表 End -->
     <!-- 任务详情 -->
     <div class="task-detail">
-      <div class="content"></div>
+      <div class="content">下午记得写博客</div>
       <div>
         <div class="desc">
+          <textarea name="" id=""></textarea>
         </div>
         <div class="remind">
           <input type="date" name="" id="">
-          <button type="submit">submit</button>
+          <!-- <button type="submit">submit</button> -->
         </div>
       </div>
     </div>
     <!-- 任务详情 End -->
+    <div class="task-detail-mask"></div>
   </div>
   <!-- 外层容器 End -->
   <script src="node_modules/jquery/dist/jquery.js"></script>
