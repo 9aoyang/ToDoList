@@ -1,3 +1,9 @@
+/*
+ * @Author: silence1amb
+ * @Date: 2018-10-04 16:12:42
+ * @Last Modified by: silence1amb
+ * @Last Modified time: 2018-10-04 16:41:49
+ */
 * {
   transition: background .2s;
 }
@@ -55,6 +61,7 @@ button {
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .add-task,
@@ -94,6 +101,7 @@ h1 {
 }
 
 .task-detail {
+  display: none;
   width: 50%;
   padding: 10px;
   bottom: 0;
@@ -121,6 +129,7 @@ textarea {
 }
 
 .task-detail-mask {
+  display: none;
   top: 0;
   right: 0;
   bottom: 0;

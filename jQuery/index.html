@@ -15,10 +15,15 @@
   <div class="container">
     <!-- 任务添加 -->
     <h1>羔羊的Todo</h1>
-    <div class="add-task">
-      <input type="text" name="" id="" placeholder="">
+    <form class="add-task">
+      <input
+        type="text"
+        name="content"
+        placeholder="请输入一个任务"
+        autofocus
+        autocomplete="off">
       <button type="submit">submit</button>
-    </div>
+    </form>
     <!-- 任务添加 End -->
     <!-- 任务列表 -->
     <div class="task-list">
@@ -30,30 +35,6 @@
         <span>detail</span>
       </div>
       <!-- 任务 End -->
-      <div class="task-item">
-        <span><input type="checkbox" name="" id=""></span>
-        <span class="task-content">item content 1</span>
-        <span>delete</span>
-        <span>detail</span>
-      </div>
-      <div class="task-item">
-        <span><input type="checkbox" name="" id=""></span>
-        <span class="task-content">item content 1</span>
-        <span>delete</span>
-        <span>detail</span>
-      </div>
-      <div class="task-item">
-        <span><input type="checkbox" name="" id=""></span>
-        <span class="task-content">item content 1</span>
-        <span>delete</span>
-        <span>detail</span>
-      </div>
-      <div class="task-item">
-        <span><input type="checkbox" name="" id=""></span>
-        <span class="task-content">item content 1</span>
-        <span>delete</span>
-        <span>detail</span>
-      </div>
     </div>
     <!-- 清单列表 End -->
     <!-- 任务详情 -->
@@ -73,7 +54,9 @@
     <div class="task-detail-mask"></div>
   </div>
   <!-- 外层容器 End -->
+  <script src="node_modules/store/dist/store.legacy.min.js"></script>
   <script src="node_modules/jquery/dist/jquery.js"></script>
+
   <script src="js/base.js"></script>
 </body>
 
