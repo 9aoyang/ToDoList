@@ -2,7 +2,7 @@
  * @Author: silence1amb
  * @Date: 2018-10-04 16:12:42
  * @Last Modified by: silence1amb
- * @Last Modified time: 2018-10-04 16:41:49
+ * @Last Modified time: 2018-10-06 10:41:31
  */
 * {
   transition: background .2s;
@@ -91,6 +91,24 @@ h1 {
 
 .task-item:hover {
   background: #ddd;
+}
+
+.task-content {
+  margin-left: 10px;
+}
+
+.action-wrap {
+  float: right;
+}
+
+.action {
+  color: #888;
+  font-size: 90%;
+  transition: color .3s;
+}
+
+.action:hover {
+  color: #333;
 }
 /* 任务列表 End */
 
